@@ -19,18 +19,18 @@ Time to have some fun with the dataframe.
 
 To start I graphed each of the columns against time - here's just the energy usage:
 
-[]!(https://github.com/Sam-Preece/Projects/blob/master/img/Energy_usage_2022.png)
+![](https://github.com/Sam-Preece/Projects/blob/master/img/Energy_usage_2022.png)
 
 Then I created a correlation matrix to see if I could find any patterens that way.
 - As the output was bunch of numbers I thought a more intuitive way of presenting the data would be as a heatmap.
 However using bokeh to plot these graphs (It's nice and ineractive - bit a bit more finicky to create with) created some problems.
 Nothing a little google and asking for help from people way more experienced than you can't solve:
 
-[]!(https://github.com/Sam-Preece/Projects/blob/master/img/Correlation_heatmap.png)
+![](https://github.com/Sam-Preece/Projects/blob/master/img/Correlation_heatmap.png)
 
 Seeing this I graphed the energy usage against temperature and found some interesting patterns:
 
-[]!(https://github.com/Sam-Preece/Projects/blob/master/img/Energy_usage_against_temp.png)
+![](https://github.com/Sam-Preece/Projects/blob/master/img/Energy_usage_against_temp.png)
 
 As you can see it appears to have three main patterns.
 - looking closer I noticed the bottom line only happend on the 6th of every month and the one above on the 5th.
@@ -46,7 +46,7 @@ The first model I created was by far the simplest one I could think of other tha
 Taking an average for and day of the week in a given month other than the 5th and the 6th (- they get their own averages).
 Thats it and it looks like ths:
 
-[]!(https://github.com/Sam-Preece/Projects/blob/master/img/First_forecast.png)
+![](https://github.com/Sam-Preece/Projects/blob/master/img/First_forecast.png)
 
 As you can see its quite repetative as each day of the week for a month is the exact same.
 Calculating the error from the 2022 gives: The CV RMSE: 21.60 %, The CV MAE: 16.43 % and the CV MBE: 0%
@@ -60,7 +60,7 @@ Using trial and error I was able to bring the model closer to the actual data by
 Square root of humidity, Square root of wind speed and the square of the temperature.
 And when show with the training data - its quite clear how it's pretty much spot on:
 
-[]!(https://github.com/Sam-Preece/Projects/blob/master/img/Training_prediction.png)
+![](https://github.com/Sam-Preece/Projects/blob/master/img/Training_prediction.png)
 
 The error values are: The CV RMSE: 13.18 % %, The CV MAE: 8.66 % and the CV MBE:-4.59 %
 These are amazing - well within any model quality checks - however these are a lower bound - We can predict any better than this
@@ -71,14 +71,14 @@ These are amazing - well within any model quality checks - however these are a l
 Time to predict some future data using the two models i've created - Now at this point I was given some weather data and energy usae for 2023.
 I formatted it in the exact same way as the last time giving this energy usage graph:
 
-[]!(https://github.com/Sam-Preece/Projects/blob/master/img/Energy_usage_2023.png)
+![](https://github.com/Sam-Preece/Projects/blob/master/img/Energy_usage_2023.png)
 
 As you can see, it gets pretty weird - This was to show that not everything in data science will be nice although for a while i thought i had done something wrong and tried to fix it.
 However if we only evaluate our models up to the point before it gets weird it shouldn't be that far off, Heres the two combined energy usage graphs:
 
-["First model"]!(https://github.com/Sam-Preece/Projects/blob/master/img/First_combined_energy_usage.png)
+!["First model"](https://github.com/Sam-Preece/Projects/blob/master/img/First_combined_energy_usage.png)
 
-["Linear regression"]!(https://github.com/Sam-Preece/Projects/blob/master/img/Second_combined_energy_usage.png)
+!["Linear regression"](https://github.com/Sam-Preece/Projects/blob/master/img/Second_combined_energy_usage.png)
 
 And given these I calculated the error for the linear regression model: The CV RMSE: 28.72 %, The CV MAE: 22.86 % and the CV MBE:14.61 %
 
