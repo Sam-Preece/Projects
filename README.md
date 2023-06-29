@@ -76,9 +76,11 @@ I formatted it in the exact same way as the last time giving this energy usage g
 As you can see, it gets pretty weird - This was to show that not everything in data science will be nice although for a while i thought i had done something wrong and tried to fix it.
 However if we only evaluate our models up to the point before it gets weird it shouldn't be that far off, Heres the two combined energy usage graphs:
 
-!["First model"](https://github.com/Sam-Preece/Projects/blob/master/img/First_combined_energy_usage.png)
+### First model
+![First model](https://github.com/Sam-Preece/Projects/blob/master/img/First_combined_energy_usage.png)
 
-!["Linear regression"](https://github.com/Sam-Preece/Projects/blob/master/img/Second_combined_energy_usage.png)
+### Linear regression
+![Linear regression](https://github.com/Sam-Preece/Projects/blob/master/img/Second_combined_energy_usage.png)
 
 And given these I calculated the error for the linear regression model: The CV RMSE: 28.72 %, The CV MAE: 22.86 % and the CV MBE:14.61 %
 
